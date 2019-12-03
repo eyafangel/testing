@@ -12,7 +12,7 @@
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('app');
 // });
 
 Route::get('/', 'PagesController@index');
@@ -22,6 +22,7 @@ Route::get('/services', 'PagesController@services');
 Route::resource('/patients', 'PatientsController');
 
 
-// Auth::routes();
+Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index');
+
